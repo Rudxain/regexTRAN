@@ -2,7 +2,6 @@
 An esoteric programming-language that works like FRACTRAN, but with regular-expressions instead of fraction-lists, and text-input instead of bigints.
 
 ## Name
-
 These are the only valid names:
 - regexTRAN
 - regexpTRAN
@@ -13,8 +12,25 @@ These are the only valid names:
 
 When introducing people to this lang, you should use the longer names, as the short ones may be confused with another software of the same name. After a disambiguating-context has been established, you may use any name, interchangeably.
 
-## Spec
+## Impl
+My Python3 impl shouldn't be taken as "The Standard Implementation", not even as "The Standard Python Implementation". It's still kinda buggy, and the spec hasn't been stabilized yet.
 
+However, it's true that "the most standard impl, as of 2023" is definitely my impl, and it's ok to use it as a template for other impls that may become standard-de-facto, as chosen by the community
+
+### Install
+```sh
+F=retran
+wget -O "$F" https://raw.githubusercontent.com/Rudxain/regexTRAN/main/main.py
+chmod 555 retran
+
+# current user
+cp "$F" "$HOME/bin/"
+
+# system
+sudo cp "$F" /usr/local/bin
+```
+
+## Spec
 This is the **official specification**. All compliant implementations must follow it. However, it's **very unstable**, so don't take it seriously (yet)
 
 Every retran program is comprised of 2 parts:
@@ -38,12 +54,6 @@ Impls are encouraged to support raw-binary input data. They are allowed to suppo
 Impls are encouraged to support inline-flags. This allows retran developers to enable modes/features, without passing impl-specific args to an interpreter. This, in turn, provides a self-contained API, unlike BF programs where all metadata must be specified in different ways to different interpreters (GUI text-boxes, CLI args, fn params, etc...).
 
 For interactive use and/or development purposes, `x` flag must be enabled by default. This allows easier editing and readability. For minification purposes, impls are allowed to disable `x`.
-
-## Impl
-
-My Python3 impl shouldn't be taken as "The Standard Implementation", not even as "The Standard Python Implementation". It's still kinda buggy, and the spec hasn't been stabilized yet.
-
-However, it's true that "the most standard impl, as of 2023" is definitely my impl, and it's ok to use it as a template for other impls that may become standard-de-facto, as chosen by the community
 
 ## CS
 I haven't proven if the spec is Turing-Complete. However, it's extremely-likely that both the spec and the impl are *Deterministic Linear-Bounded Automata*.
