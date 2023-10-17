@@ -44,3 +44,8 @@ For interactive use and/or development purposes, `x` flag must be enabled by def
 My Python3 impl shouldn't be taken as "The Standard Implementation", not even as "The Standard Python Implementation". It's still kinda buggy, and the spec hasn't been stabilized yet.
 
 However, it's true that "the most standard impl, as of 2023" is definitely my impl, and it's ok to use it as a template for other impls that may become standard-de-facto, as chosen by the community
+
+## CS
+I haven't proven if the spec is Turing-Complete. However, it's extremely-likely that both the spec and the impl are *Deterministic Linear-Bounded Automata*.
+
+This is because regex allows conditional read-write of data, and the recursive-replacements are a form of structured-loops. But the output-size seems entirely bounded by input-size.
