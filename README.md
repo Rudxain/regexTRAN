@@ -15,12 +15,14 @@ When introducing people to this lang, you should use the longer names, as the sh
 ## Impl
 My Python3 impl shouldn't be taken as "The Standard Implementation", not even as "The Standard Python Implementation". It's still kinda buggy, and the spec hasn't been stabilized yet.
 
-However, it's true that "the most standard impl, as of 2023" is definitely my impl, and it's ok to use it as a template for other impls that may become standard-de-facto, as chosen by the community
+However, it's true that "the most standard impl, as of 2023" is definitely my impl, and it's ok to use it as a template for other impls that may become standard-de-facto, as chosen by the community.
 
 ### Install
 ```sh
 F=retran
 wget -O "$F" https://raw.githubusercontent.com/Rudxain/regexTRAN/main/main.py
+
+# does mode get inherited by copies?
 chmod 555 retran
 
 # current user
