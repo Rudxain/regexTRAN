@@ -1,0 +1,7 @@
+#!/usr/bin/env retran
+# we shouldn't assume that input
+# is always an empty-string.
+(?s)^.*$
+# this will print it twice,
+# which is a bug (I guess?)
+//hello world
