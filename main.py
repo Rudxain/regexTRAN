@@ -10,6 +10,9 @@ def retran_exec(src: str, replace: str | bytes, dat: str | bytes):
 		yield dat
 
 def main(*args: str):
+	if len(args) == 0:
+		print('usage: retran <program file> [input file]')
+		
 	with open(args[0], 'r') as f:
 		src = f.read()
 	dat = ''
