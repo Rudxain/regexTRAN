@@ -26,7 +26,7 @@ chmod 555 retran
 # current user
 cp "$F" "$HOME/bin/"
 
-# system
+# system-wide
 sudo cp "$F" /usr/local/bin
 ```
 
