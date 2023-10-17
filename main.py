@@ -3,8 +3,9 @@ from typing import Final
 from sys import argv
 import re
 
+# this is intended to be imported
 def retran_exec(src: str, replace: str | bytes, dat: str | bytes):
-	prg = re.compile(src, re.X)
+	prg: Final = re.compile(src, re.X)
 	while dat != (dat := prg.sub(replace, dat)):
 		yield dat
 
