@@ -27,11 +27,13 @@ Script/Program files must be valid UTF-8 without BOM.
 
 However, for theoretical computer-science purposes, programs may be treated as abstract data-structures that aren't "unified" nor "split", and therefore need no delimiter, as the concept of a file-system doesn't exist in the theoretical realm.
 
-When executing a program, the regex is used to repeatedly find-&-replace **substrings** of the input string (to match the full string, `^` & `$` must be used, unless multi-line mode is active), until it enters a "trivial cycle" (see Collatz Conjecture), then prints the last generation of the string, then halts. A "trivial cycle" is defined as a string such that any further generations are identical (no-op).
+When executing a program, the regex is used to repeatedly find-&-replace **substrings** of the input string (to match the full string, `^` & `$` must be used, unless multi-line mode is active), until it enters a "trivial cycle" (see Collatz Conjecture), then returns/prints the last generation of the string, then halts. A "trivial cycle" is defined as a string such that any further generations are identical (no-op).
 
 Impls are **extremely encouraged** to yield/print every generation of the string as the program runs.
 
 The standard imposes no restrictions on memory usage. Programs may use as much memory as they request, or as much memory as the impl supports on a given platform.
+
+Impls are encouraged to support raw-binary input data. They are allowed to support hexadecimal escape-sequences in replacement-strings.
 
 Impls are encouraged to support inline-flags. This allows retran developers to enable modes/features, without passing impl-specific args to an interpreter. This, in turn, provides a self-contained API, unlike BF programs where all metadata must be specified in different ways to different interpreters (GUI text-boxes, CLI args, fn params, etc...).
 
