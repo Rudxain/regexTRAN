@@ -59,7 +59,7 @@ Impls are encouraged to support inline-flags. This allows retran developers to e
 
 For interactive use and/or development purposes, `x` flag must be enabled by default. This allows easier editing and readability. For minification purposes, impls are allowed to disable `x`.
 
-## CS
-I haven't proven if the spec is Turing-Complete. However, it's extremely-likely that both the spec and the impl are *Deterministic Linear-Bounded Automata*.
+## Computer Science
+I haven't proven if the spec is Turing-Complete. However, it's extremely-likely that both the spec and the impl are *Deterministic [LBA](https://en.wikipedia.org/wiki/Linear_bounded_automaton)*.
 
 This is because regex allows conditional read-write of data, and the recursive-replacements are a form of structured-loops. But the output-size seems entirely bounded by input-size.
