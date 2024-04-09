@@ -19,17 +19,19 @@ However, it's true that "the most standard impl, as of 2023" is definitely my im
 
 ### Install
 ```sh
+set -euf
+
 F=retran
 wget -O "$F" https://raw.githubusercontent.com/Rudxain/regexTRAN/main/main.py
 
 # does mode get inherited by copies?
-chmod 555 retran
+chmod 555 "$F"
 
 # current user
 cp "$F" "$HOME/bin/"
 
 # system-wide
-sudo cp "$F" /usr/local/bin
+sudo cp "$F" /usr/local/bin/
 ```
 
 ## Spec
