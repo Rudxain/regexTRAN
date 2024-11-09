@@ -70,4 +70,4 @@ I haven't proven if the spec is Turing-Complete. However, it's extremely-likely 
 
 This is because regex allows conditional read-write of data, and the tail-recursive-replacements are a form of structured-loops. But the output-size seems entirely bounded by input-size.
 
-I assume it should be possible to implement [Rule110](https://uwe-repository.worktribe.com/output/1020251/a-note-about-the-regular-language-of-rule-110-and-its-general-machine-the-scalar-subset-diagram), as a single regex can use `|` to define a list of sub-expressions. But the replacement-str is fixed, so I'm unsure if this is actually possible without associating a different replacement for each rule
+I assume it should be possible to implement [Rule110](https://uwe-repository.worktribe.com/output/1020251/a-note-about-the-regular-language-of-rule-110-and-its-general-machine-the-scalar-subset-diagram), as a single regex can use `|` to define a list of sub-expressions. But the replacement-str is fixed, so I'm unsure if this is actually possible without [associating a different replacement for each rule](https://reddit.com/r/programming/comments/79eyfw/comment/dp1lcxc/)
