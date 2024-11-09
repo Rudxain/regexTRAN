@@ -3,9 +3,12 @@ from typing import Final
 from sys import argv
 import re
 
-
-# this is intended to be imported
+# this should accept pre-compiled `re.Pattern`s,
+# but IDK how to do that properly
 def retran_exec(src: str, replace: str | bytes, dat: str | bytes):
+	'''
+	this is intended to be imported
+	'''
 	prg: Final = re.compile(src, re.X)
 	while dat != (dat := prg.sub(replace, dat)):
 		yield dat
@@ -22,6 +25,8 @@ def main(*args: str):
 		with open(args[1], 'r') as f:
 			dat = f.read()
 
+	# order is very important!
+	# `src` can contain \x2f, but `replace` can't
 	(src, replace) = src.split('//', 1)
 
 	for gen in retran_exec(src, replace, dat):
