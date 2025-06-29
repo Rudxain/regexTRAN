@@ -1,10 +1,12 @@
 # RET
+> [!note]
+> This has been archived because it's somewhat worthless. It might be deleted later.
+>
+> However, I'm still  wondering if this is Turing-Complete
+
 An esoteric programming-language that works like [FRACTRAN](https://en.wikipedia.org/wiki/FRACTRAN), but:
 - a single regular-expression instead of lists of fractions
-- string-input instead of [big-integers](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic).
-
-> [!warning]
-> I'm planning a [major rewrite](https://github.com/Rudxain/regexTRAN/issues/1)!
+- string-input instead of [big-integers](https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic)
 
 ## Name
 These are the only valid names:
